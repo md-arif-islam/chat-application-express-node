@@ -3,11 +3,12 @@ const express = require("express");
 
 // internal imports
 const { getInbox } = require("../controller/inboxController");
+const decorateHtmlResponse = require("../middlewares/common/decoratedHtmlResponse");
 
 // init
 const router = express.Router();
 
 // login page
-router.get("/", getInbox);
+router.get("/", decorateHtmlResponse("Inbox"), getInbox);
 
 module.exports = router;
