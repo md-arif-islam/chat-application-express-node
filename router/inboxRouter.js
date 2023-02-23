@@ -3,7 +3,7 @@ const express = require("express");
 
 // internal imports
 const { getInbox } = require("../controller/inboxController");
-const decorateHtmlResponse = require("../middlewares/common/decoratedHtmlResponse");
+const decorateHtmlResponse = require("../middlewares/common/decorateHtmlResponse");
 
 // init
 const router = express.Router();
